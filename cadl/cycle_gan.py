@@ -22,9 +22,11 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow.contrib.layers as tfl
+from PIL import Image
 from cadl.utils import imcrop_tosquare
-from scipy.misc import imresize
 
+def imresize(im, shape):
+    return np.array(image.fromarray(im).resize(shape))
 
 def l1loss(x, y):
     """Summary
